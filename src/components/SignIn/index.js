@@ -3,7 +3,7 @@ import { withRouter, Link } from "react-router-dom";
 
 import * as ROUTES from "../../constants/routes";
 import classes from "./style.module.css";
-import firebase from "../../firebase/firebase";
+import { authService } from "../../firebase";
 
 const INITIAL_STATE = {
   email: "",
@@ -21,15 +21,15 @@ class SignIn extends Component {
   onSubmitHandler = event => {
     const { email, password } = this.state;
 
-    // this.props.firebase
-    //   .doSignInWithEmailAndPassword(email, password)
-    //   .then(() => {
-    //     this.setState({ ...INITIAL_STATE });
-    //     this.props.history.push(ROUTES.HOME);
-    //   })
-    //   .catch(error => {
-    //     this.setState({ error });
-    //   });
+    authService
+      .doSignInWithEmailAndPassword(email, password)
+      .then(() => {
+        this.setState({ ...INITIAL_STATE });
+        this.props.history.push(ROUTES.LANDING);
+      })
+      .catch(error => {
+        this.setState({ error });
+      });
 
     event.preventDefault();
   };

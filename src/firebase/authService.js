@@ -17,8 +17,17 @@ class AuthService {
     firebaseAuth.currentUser.updatePassword(password);
 
   isAuthenticated = () => {
-    return !!firebaseAuth.currentUser || !localStorage.getItem(storageKey);
+    return !!firebaseAuth.currentUser || !!localStorage.getItem(storageKey);
   };
+
+  onAuthUserListener = (next, fallback) =>
+    firebaseAuth.onAuthStateChanged(authUser => {
+      if (authUser) {
+        next(authUser);
+      } else {
+        fallback();
+      }
+    });
 }
 
 export let authService = new AuthService();
