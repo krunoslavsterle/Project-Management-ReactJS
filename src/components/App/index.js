@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import * as ROUTES from "../../constants/routes";
 import { authService, storageKey } from "../../firebase";
+
 import LandingPage from "../../pages/landing";
+import Dashboard from "../../pages/dashboard";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
 
@@ -32,10 +34,11 @@ class App extends Component {
         <div className="App">
           <Route exact path={ROUTES.SIGN_UP} component={SignUp} />
           <Route exact path={ROUTES.SIGN_IN} component={SignIn} />
+          <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <MatchWhenAuthenticated
             exact
-            path={ROUTES.LANDING}
-            component={LandingPage}
+            path={ROUTES.DASHBOARD}
+            component={Dashboard}
           />
         </div>
       </Router>

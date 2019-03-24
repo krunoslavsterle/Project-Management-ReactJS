@@ -6,11 +6,13 @@ import classes from "./style.module.css";
 import { authService } from "../../firebase";
 
 const LayoutHeader = () => {
-  const isAuthenticated = authService.isAuthenticated;
-  var rightContent = <Link to={{ pathname: ROUTES.SIGN_IN }}>Dashboard</Link>;
+  const isAuthenticated = authService.isAuthenticated();
+  var rightContent = <Link to={{ pathname: ROUTES.DASHBOARD }}>Dashboard</Link>;
   if (!isAuthenticated) {
-    rightContent = (<Link to={{ pathname: ROUTES.SIGN_IN }}>Sign In</Link>,
-    <Link to={{ pathname: ROUTES.SIGN_UP }}>Sign Up</Link>);
+    rightContent = [
+      <Link to={{ pathname: ROUTES.SIGN_IN }}>Sign In</Link>,
+      <Link to={{ pathname: ROUTES.SIGN_UP }}>Sign Up</Link>
+    ];
   }
 
   return (
