@@ -17,3 +17,14 @@
   text-align: center;
   padding-left: 30px;
 }
+
+.Right {
+  float: right;
+  padding-right: 15px;
+}
+
+.Right a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: white;
+}

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
+import * as ROUTES from "../../constants/routes";
 import { authService, storageKey } from "../../firebase";
 import LandingPage from "../../pages/landing";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
-import * as ROUTES from "../../constants/routes";
 
 class App extends Component {
   state = {
