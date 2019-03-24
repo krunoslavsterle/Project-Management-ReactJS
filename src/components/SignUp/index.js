@@ -4,7 +4,7 @@ import { withRouter, Link } from "react-router-dom";
 
 import * as ROUTES from "../../constants/routes";
 import classes from "./style.module.css";
-import { withAuthService } from "../../firebase";
+import { authService } from "../../firebase";
 
 const INITIAL_STATE = {
   username: "",
@@ -21,7 +21,7 @@ class SignUp extends Component {
   onSubmitHandler = event => {
     const { username, email, passwordOne, isAdmin } = this.state;
 
-    this.props.authService
+    authService
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         console.log("created!");
@@ -115,4 +115,4 @@ class SignUp extends Component {
   }
 }
 
-export default withAuthService(SignUp);
+export default SignUp;

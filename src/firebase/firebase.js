@@ -13,9 +13,7 @@ const devConfig = {
 };
 
 // Create a firebase instance.
-app.initializeApp(devConfig);
+export const firebase = app.initializeApp(devConfig);
 
-const firebaseDatabase = app.database();
-const firebaseAuth = app.auth();
-
-export { firebaseDatabase, firebaseAuth };
+export const firebaseDatabase = app.database();
+export const firebaseAuth = app.auth();

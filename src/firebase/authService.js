@@ -1,5 +1,7 @@
 import { firebaseAuth } from "./firebase";
 
+export const storageKey = "project-management-storage";
+
 class AuthService {
   doCreateUserWithEmailAndPassword = (email, password) =>
     firebaseAuth.createUserWithEmailAndPassword(email, password);
@@ -13,6 +15,10 @@ class AuthService {
 
   doPasswordUpdate = password =>
     firebaseAuth.currentUser.updatePassword(password);
+
+  isAuthenticated = () => {
+    return !!firebaseAuth.currentUser || !localStorage.getItem(storageKey);
+  };
 }
 
-export default AuthService;
+export let authService = new AuthService();

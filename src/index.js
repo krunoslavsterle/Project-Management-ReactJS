@@ -3,14 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
-import { AuthContext, AuthService } from "./firebase";
 
-ReactDOM.render(
-  <AuthContext.Provider value={new AuthService()}>
-    <App />
-  </AuthContext.Provider>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 if (module.hot) {
   module.hot.accept();

@@ -1,4 +1,4 @@
-import AuthContext, { withAuthService } from "./authContext";
-import AuthService from "./authService";
+import { authService } from "./authService";
+import { firebase } from "./firebase";
 
-export { AuthContext, AuthService, withAuthService };
+export { authService, firebase };
