@@ -3,6 +3,7 @@ import { withRouter, Link } from "react-router-dom";
 
 import * as ROUTES from "../../constants/routes";
 import classes from "./style.module.css";
+import firebase from "../../firebase/firebase";
 
 const INITIAL_STATE = {
   email: "",

@@ -4,6 +4,7 @@ import { withRouter, Link } from "react-router-dom";
 
 import * as ROUTES from "../../constants/routes";
 import classes from "./style.module.css";
+import { withAuthService } from "../../firebase";
 
 const INITIAL_STATE = {
   username: "",
@@ -18,7 +19,16 @@ class SignUp extends Component {
   state = { ...INITIAL_STATE };
 
   onSubmitHandler = event => {
-    console.log("not implemented!");
+    const { username, email, passwordOne, isAdmin } = this.state;
+
+    this.props.authService
+      .doCreateUserWithEmailAndPassword(email, passwordOne)
+      .then(authUser => {
+        console.log("created!");
+      })
+      .catch(error => {
+        this.setState({ error });
+      });
 
     event.preventDefault();
   };
@@ -105,4 +115,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default withAuthService(SignUp);
