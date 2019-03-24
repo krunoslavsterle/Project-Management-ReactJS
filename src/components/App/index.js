@@ -1,28 +1,19 @@
-import React, { Component } from "react";
-import logo from "../../logo.svg";
-import "./style.css";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import LandingPage from "../../pages/landing";
+import SignUp from "../SignUp";
+import SignIn from "../SignIn";
+import * as ROUTES from "../../constants/routes";
+
+const App = () => (
+  <Router>
+    <div className="App">
+      <Route exact path={ROUTES.SIGN_UP} component={SignUp} />
+      <Route exact path={ROUTES.SIGN_IN} component={SignIn} />
+      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+    </div>
+  </Router>
+);
 
 export default App;
