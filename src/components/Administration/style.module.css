@@ -1,0 +1,6 @@
+.Administration {
+  display: flex;
+  flex-flow: row;
+  flex-direction: row;
+  align-items: flex-start;
+}

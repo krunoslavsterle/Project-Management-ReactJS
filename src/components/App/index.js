@@ -8,6 +8,7 @@ import LandingPage from "../../pages/landing";
 import Dashboard from "../../pages/dashboard";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
+import Administration from "../Administration";
 
 class App extends Component {
   state = {
@@ -38,7 +39,7 @@ class App extends Component {
           <MatchWhenAuthenticated
             exact
             path={ROUTES.DASHBOARD}
-            component={Dashboard}
+            component={Administration}
           />
         </div>
       </Router>
