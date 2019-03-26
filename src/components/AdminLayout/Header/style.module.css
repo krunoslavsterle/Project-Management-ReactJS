@@ -1,0 +1,29 @@
+.Header {
+  padding: 5px 0;
+  border: 0px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 auto;
+  flex-basis: auto;
+  width: 100%;
+}
+
+.MainNav {
+  display: flex;
+}
+
+.MainNav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

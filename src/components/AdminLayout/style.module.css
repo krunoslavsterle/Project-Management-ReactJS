@@ -1,0 +1,25 @@
+.Administration {
+  display: flex;
+  flex-flow: row;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.MainPage {
+  margin: 10px;
+  flex-grow: 1;
+}
+
+@media (min-width: 500px) {
+  .MainPage {
+    margin: 40px;
+    flex-grow: 0;
+  }
+}

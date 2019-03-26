@@ -1,0 +1,40 @@
+.Sidebar {
+  padding-top: 20px;
+  background: #2c343f;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+.Sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.Sidebar a:hover {
+  background-color: #232a32;
+}
+
+.LinkActive {
+  color: #f8f8f8 !important;
+}
+
+.LinkName {
+  margin-left: 15px;
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .Sidebar {
+    width: 230px;
+  }
+  .LinkName {
+    display: inline;
+  }
+}
