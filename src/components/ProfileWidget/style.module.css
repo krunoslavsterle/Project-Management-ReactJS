@@ -5,12 +5,14 @@
 }
 
 .Image {
-  padding: 30px 80px;
+  padding: 20px 40px;
+  flex-grow: 100;
+  margin: auto;
 }
 
 .Image img {
   border-radius: 50%;
-  height: 120px;
+  height: 80px;
 }
 
 .UserName {
@@ -43,4 +45,14 @@
   align-items: center;
   font-size: 20px;
   color: #797979;
+}
+
+@media (min-width: 500px) {
+  .Image {
+    padding: 30px 80px;
+  }
+
+  .Image img {
+    height: 120px;
+  }
 }

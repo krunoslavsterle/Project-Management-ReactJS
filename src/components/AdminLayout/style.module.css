@@ -13,5 +13,13 @@
 }
 
 .MainPage {
-  margin: 40px;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+@media (min-width: 500px) {
+  .MainPage {
+    margin: 40px;
+    flex-grow: 0;
+  }
 }
