@@ -6,9 +6,10 @@ import { authService, storageKey } from "../../firebase";
 
 import LandingPage from "../../pages/landing";
 import Dashboard from "../../pages/dashboard";
+import Users from "../../pages/users";
+import Projects from "../../pages/projects";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
-import Administration from "../Administration";
 
 class App extends Component {
   state = {
@@ -39,8 +40,14 @@ class App extends Component {
           <MatchWhenAuthenticated
             exact
             path={ROUTES.DASHBOARD}
-            component={Administration}
+            component={Dashboard}
           />
+          <MatchWhenAuthenticated
+            exact
+            path={ROUTES.PROJECTS}
+            component={Projects}
+          />
+          <MatchWhenAuthenticated exact path={ROUTES.USERS} component={Users} />
         </div>
       </Router>
     );

@@ -4,10 +4,13 @@ import classes from "./style.module.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-const Administration = () => (
+const Administration = props => (
   <div className={classes.Administration}>
-    <Sidebar />
     <Header />
+    <div className={classes.Container}>
+      <Sidebar />
+      <main className={classes.MainPage}>{props.children}</main>
+    </div>
   </div>
 );
 

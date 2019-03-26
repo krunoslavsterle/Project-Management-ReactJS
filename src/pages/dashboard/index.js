@@ -1,9 +1,8 @@
 import React from "react";
 
-const Dashboard = () => (
-  <div>
-    <h1>Dashboard</h1>
-  </div>
-);
+import classes from "./style.module.css";
+import AdminLayout from "../../components/Administration";
+
+const Dashboard = () => <AdminLayout>Dashboard</AdminLayout>;
 
 export default Dashboard;
