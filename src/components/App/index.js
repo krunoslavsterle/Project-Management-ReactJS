@@ -11,6 +11,15 @@ import Projects from "../../pages/projects";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faHome,
+  faProjectDiagram,
+  faUsersCog
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faHome, faProjectDiagram, faUsersCog);
+
 class App extends Component {
   state = {
     user: null

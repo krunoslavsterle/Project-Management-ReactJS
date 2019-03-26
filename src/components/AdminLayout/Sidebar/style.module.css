@@ -1,5 +1,4 @@
 .Sidebar {
-  width: 230px;
   padding-top: 20px;
   background: #2c343f;
   height: 100vh;
@@ -13,6 +12,9 @@
   font-size: 18px;
   padding: 10px 20px;
   color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
 }
 
 .Sidebar a:hover {
@@ -21,4 +23,18 @@
 
 .LinkActive {
   color: #f8f8f8 !important;
+}
+
+.LinkName {
+  margin-left: 15px;
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .Sidebar {
+    width: 230px;
+  }
+  .LinkName {
+    display: inline;
+  }
 }
