@@ -1,7 +1,12 @@
 import React from "react";
 
 import AdminLayout from "../../components/AdminLayout";
+import Projects from "../../components/Projects";
 
-const Projects = () => <AdminLayout>Projects</AdminLayout>;
+const ProjectsPage = () => (
+  <AdminLayout>
+    <Projects />
+  </AdminLayout>
+);
 
-export default Projects;
+export default ProjectsPage;

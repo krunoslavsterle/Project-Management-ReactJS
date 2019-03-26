@@ -1,0 +1,67 @@
+.Project {
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.Title {
+  background-color: #40454d;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.Users {
+  display: flex;
+  flex-flow: row;
+  margin: auto;
+}
+
+.Users img {
+  border-radius: 50%;
+  height: 35px;
+  margin: 20px 1px;
+}
+
+.Status {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.StatusItem {
+  display: flex;
+  flex-flow: column;
+  margin: 0 20px;
+  color: #337ab7;
+  flex-grow: 100;
+}
+
+.Late {
+  color: #ed6b75;
+}
+
+.StatusItem h3 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.StatusItem h5 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 500px) {
+  .Project {
+    width: auto;
+    margin: 0px 10px 10px 0px;
+  }
+}
