@@ -1,0 +1,19 @@
+.ProjectStatus {
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.Title {
+  background-color: #40454d;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.Chart {
+  padding: 20px;
+}

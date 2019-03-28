@@ -8,6 +8,7 @@ import LandingPage from "../../pages/landing";
 import Dashboard from "../../pages/dashboard";
 import Users from "../../pages/users";
 import Projects from "../../pages/projects";
+import ProjectOverview from "../../pages/projectOverview";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
 
@@ -57,6 +58,11 @@ class App extends Component {
             component={Projects}
           />
           <MatchWhenAuthenticated exact path={ROUTES.USERS} component={Users} />
+          <MatchWhenAuthenticated
+            exact
+            path={ROUTES.PROJECT_OVERVIEW}
+            component={ProjectOverview}
+          />
         </div>
       </Router>
     );

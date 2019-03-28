@@ -17,8 +17,16 @@ const Sidebar = () => (
     </NavLink>
     <NavLink to={ROUTES.USERS} exact activeClassName={classes.LinkActive}>
       <FontAwesomeIcon icon="users-cog" />
-
       <span className={classes.LinkName}>Users</span>
+    </NavLink>
+    <br />
+    <NavLink
+      to={ROUTES.PROJECT_OVERVIEW}
+      exact
+      activeClassName={classes.LinkActive}
+    >
+      <FontAwesomeIcon icon="users-cog" />
+      <span className={classes.LinkName}>Overview</span>
     </NavLink>
   </aside>
 );

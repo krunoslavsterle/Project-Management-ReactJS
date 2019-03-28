@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.Project a {
+  text-decoration: none;
+}
+
 .Title {
   background-color: #40454d;
   color: #fff;

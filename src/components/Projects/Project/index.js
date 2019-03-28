@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./style.module.css";
+import * as ROUTES from "../../../constants/routes";
 
 const Project = () => (
   <div className={classes.Project}>
-    <div className={classes.Title}>Title</div>
+    <Link to={ROUTES.PROJECT_OVERVIEW}>
+      <div className={classes.Title}>Title</div>
+    </Link>
     <div className={classes.Users}>
       <img src="https://picsum.photos/100?random" />
       <img src="https://picsum.photos/100?random" />
