@@ -28,7 +28,20 @@ const ProjectStatus = () => {
       <div className={classes.Chart}>
         <Pie data={data} options={options} />
       </div>
-      <div>Project Status</div>
+      <div className={classes.Status}>
+        <div className={classes.StatusItem}>
+          <span>18</span>
+          <p>Active</p>
+        </div>
+        <div className={classes.StatusItem}>
+          <span>14</span>
+          <p>Completed</p>
+        </div>
+        <div className={classes.StatusItem}>
+          <span>3</span>
+          <p>Late</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -15,5 +15,34 @@
 }
 
 .Chart {
-  padding: 20px;
+  padding: 30px;
+}
+
+.Chart canvas {
+  width: 220px;
+  height: 220px;
+}
+
+.Status {
+  padding-bottom: 15px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.StatusItem {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 20px;
+  color: #797979;
+}
+
+.StatusItem span {
+  margin-bottom: 10px;
+}
+
+.StatusItem p {
+  font-size: 14px;
+  margin: 0;
 }
