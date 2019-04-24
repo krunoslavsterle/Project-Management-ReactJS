@@ -32,7 +32,10 @@ class App extends Component {
         this.setState({ user: authUser });
         localStorage.setItem(storageKey, authUser);
       },
-      () => localStorage.removeItem(storageKey)
+      () => {
+        this.setState({ user: null });
+        localStorage.removeItem(storageKey);
+      }
     );
   }
 

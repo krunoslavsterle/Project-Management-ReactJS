@@ -1,9 +1,7 @@
-import firebase from "./firebase";
+import { firebaseDatabase } from "./firebase";
 
-const DatabaseService = () => {
-  const database = firebase.database();
+class DatabaseService {
+  projects = userId => firebaseDatabase.ref(`projects/${userId}`);
+}
 
-  // Methods:
-};
-
-export default databaseService;
+export let databaseService = new DatabaseService();
